@@ -1,0 +1,172 @@
+body{
+    background-color: rgb(173, 185, 197);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tweet{
+    background-color: #fff;
+    width:600px;
+    margin:0 auto;
+    padding: 20px;
+    overflow:hidden;
+}
+
+.tweet .tweet-header {
+    overflow:hidden;
+    }
+  
+
+.tweet .tweet-header img.avatar{
+width: 50px;
+height: 50PX;
+background-color: #fff;
+border-radius: 30PX;
+float:left; /*al agregar esto, deja de ocupar todo el espacio y libera espacio al contenido siguiente a acercarse*/
+}
+
+.tweet .tweet-header .user{
+    float:left;
+    margin: 10px 0 0 15px;
+}
+ 
+.tweet .tweet-header .account-name{
+font-weight: bold;
+font-size: 18px;
+margin:0; /*por ser párrafo, ya tenía un margen y por eso se la saqué*/
+}
+
+.tweet .tweet-header .user-name{
+    font-weight: normal;
+    font-size: 18px;
+    color:#999;
+
+}
+
+.tweet .tweet-header .follow{
+display:block; /*esto para que no esté inline, que es la característica natural de este elemento*/
+border: 1px solid #910000; /*las propiedades del borde son muchas*/
+border-radius:30px;/*se puede poner porcentual pero me haría un lío no entendí por qué*/
+width: 100px;
+text-align: center;
+padding: 6px 0; /*el primero es vertical, el horizontal no hace falta porque ya está centrado. acá se perdería el redondeado porque agrando la caja*/
+color:#910000; /*la propiedad aplica a texto*/
+text-decoration: none; /*esta propiedad generalmente la usaremos para eliminar características que vienen por defecto, casi nunca para subrayar u otras cosas*/
+float:right;
+font-weight: bold;
+transition:all, 1s, ease-out;
+
+}
+
+.tweet .tweet-header .follow:hover{
+background-color: #910000;
+color:white;
+}
+
+.tweet .tweet-body {}
+
+.tweet .tweet-body .tweet-content {
+    font-size: 27px;
+    margin: 18px 0;
+}
+
+.tweet .tweet-body .tweet-date {
+    font-size: 18px;
+    color:#999;
+    margin: 0 0 18px 0;
+}
+
+.tweet .tweet-interactions {
+    font-size: 18px;
+    overflow: hidden;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+/*
+.tweet .tweet-interactions .tweet-stats-block {
+    border-right:1px solid rgb(204, 204, 204);    
+} esto es lo que no anda*/
+
+.tweet .tweet-interactions .tweet-stats {
+    color:#999;
+    float:left;
+    margin: 15px 9px 15px 0;
+}
+
+.tweet .tweet-interactions .tweet-stats .tweet-stats-number{
+    font-weight: bold;
+    color:#000;
+}
+
+.tweet .tweet-interactions .avatar-list {
+    float:left;
+    list-style-type:none;
+    margin: 0;
+    padding: 0 9px;
+    border-left:1px solid rgb(204, 204, 204);
+     }
+
+.tweet .tweet-interactions .avatar-list .avatar {
+    float:left;
+    background-color:#999;
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    border: 1px solid #999;
+    text-align: center;
+    margin: 12px 3px;
+    }
+.tweet .tweet-footer {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    font-size: 12px;
+    font-weight: bold;
+    color:#999;
+    }
+
+.tweet .tweet-footer li a {
+    text-decoration:none;
+    float: left;
+    margin: 12px 18px 5px 5px;
+}
+
+.tweet .tweet-footer li a:hover {
+    color:#910000; 
+} 
+
+.tweet-reply {
+    width:600px;
+    margin:0 auto;
+    padding: 20px;
+    background-color:rgba(235, 235, 235);
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    overflow: hidden;
+
+}
+.tweet-reply .reply-avatar {
+    width: 35px;
+    height: 35PX;
+    border-radius: 30PX;
+    margin: auto 10px;
+    float:left;
+}
+
+.tweet-reply .reply {
+    width:85%;
+    border:1px solid #e67373;
+    border-radius:5px;
+    float:left;
+/*    resize:Vertical;
+    overflow:scroll;*/
+    height: 35px;
+}
+
+/*qué me falta:
+agregarle un link a # de rt y favs
+agregarle propiedades al hover de los avatareas
+agregarle link a los avatares
+¿cómo hago para que se acomoden mejor? no consigo el centrado que quiero
+no sé cómo hacer para que el input crezca verticalmente con el texto
+*/

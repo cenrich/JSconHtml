@@ -1,0 +1,71 @@
+body {
+    background-color:#336699;
+    margin:0;
+    padding:0;
+}
+
+form {
+    display:block;
+    width:140px;
+    margin: 50px auto 0;
+}
+
+form label {
+    font-family:verdana;
+    color:#fff;
+    font-size: 12px;
+    line-height: 24px;
+    display:block;
+    padding: 0 0 0 30px; /*en el padding voy a poner la pseuda cajita, sumado a un before*/
+    position:relative; /*así se transforma en referencia para el cosito que voy a flotar*/
+}
+
+form label::before, form label::after { /*aquí defino lo que sea común para ambos selectores. 
+la coma separa ambos selectores*/
+    content:''; /*esto hace que el elemento de hecho exista aunque no tenga nada*/
+    display:block;
+    position:absolute;
+    width:10px;
+    height:10px;
+    top:5px;
+    left:4px;
+}
+
+form label::before {
+    border: 2px solid #fff;
+    border-radius:2px;
+}
+
+form label::after {
+    border: 2px solid #fff;
+    border-top:none;
+    border-left:none;
+    top:0px;
+    left:8px;
+    width:8px;
+    height: 13px;
+    transform:rotate(45deg);
+    display:none;
+}
+
+form label.checked::before { /*acá me mandé alguna porque no me dan los clores*/
+    background-color:#fff;
+}
+
+form label.checked::after{
+    display:block;
+}
+
+form label input {
+    display:none;
+}
+
+.cosito {
+    height:50px;
+    width:50px;
+    background-color:pink;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
